@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
     // Set standard response headers
     res.setHeader('Content-Type', 'application/json');
 
-    // --- POST /api/reservations: Create a new appointment ---
+    // --- POST /api/appointments: Create a new appointment ---
     if (pathname === '/api/appointment' && method === 'POST') {
         let body = '';
 
@@ -70,6 +70,6 @@ const server = http.createServer((req, res) => {
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Minimal Reservation Server running on http://localhost:${PORT}`);
-    console.log(`Listening for POST requests at /api/reservations`);
+    console.log(`Listening for POST requests at /api/appointments`);
 
 });
