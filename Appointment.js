@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
             const { name, phone, date } = JSON.parse(body);
 
             // Basic Validation: Ensure all necessary fields are present
-            if (!appointmentId || !name || !phone || !date) {
+            if (!name || !phone || !date) {
                 res.statusCode = 400;
                 return res.end(JSON.stringify({ 
                     error: "Missing required appintment fields (name, phone, date)" 
